@@ -1,34 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bug Report: Redirects Not Working Correctly with Middleware in Next.js
 
-## Getting Started
+## Description
+When redirects are set up in the `next.config.js` file, they work as expected. However, if a `middleware.ts` file is added to the project, clicking a link with a redirect will navigate the user to the page without any properties.
 
-First, run the development server:
+## Steps to Reproduce
+1. Set up redirects in the `next.config.js` file.
+2. Confirm that the redirects are working as expected.
+3. Add a `middleware.ts` file to the project.
+4. Click a link that should trigger a redirect.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Expected Result
+The user should be redirected to the intended page with all the expected properties.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Actual Result
+The user is redirected to the page, but it's rendered without any properties.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Additional Information
+- Next.js version: 13.5.3
+- Node.js version: 18.14.2
